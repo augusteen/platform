@@ -1,59 +1,52 @@
-.toolbar-page {
+.toolbar-page{
   margin-bottom: 26px;
-
-  .card-container {
+  .card-container{
     margin: 0;
   }
-
-  .top-toolbar {
-    &__choice-list-items {
+  .top-toolbar{
+    &__choice-list-items{
       padding-right: $grid-gutter-width;
     }
-
-    &__button-new-file svg {
+    &__button-new-file svg{
       transition: .2s ease-in-out all;
     }
-  
-    &__button-new-file.active svg {
-      transform: rotate(135deg);
+    &__button-new-file.active svg{
+      @include transform(rotate(135deg));
     }
   }
+  .search-container{
+    @include flexbox;
+    @include align-items(center);
 
-  .search-container {
-    display: flex;
-    align-items: center;
-
-    @include media-breakpoint-up(sm) { 
+    @include media-breakpoint-up(sm){ 
       width: calc(100%/2);
     }
-    @include media-breakpoint-up(md) { 
+    @include media-breakpoint-up(md){ 
       width: auto;
       margin-right: 1rem;
     }
-    @include media-breakpoint-up(xxl) { 
+    @include media-breakpoint-up(xxl){ 
       margin-right: 2rem;
     }
   }
-  .base-button-action {
+  .base-button-action{
     height: 100%;
   }
 }
 
-.project-list,
-.cloud-list,
-.page-clouds {
-  .top-toolbar {
-    &__choice-list-items {
-      width: 216px;
-      padding: 0;
+.project-list, .cloud-list, .page-clouds{
+  .top-toolbar{
+    &__choice-list-items{
       margin: 0 auto;
+      padding: 0;
+      width: 216px;
     }
   }
 }
 
-.cloud-list {
-  .top-toolbar {
-    .choice-list__field-selected {
+.cloud-list{
+  .top-toolbar{
+    .choice-list__field-selected{
       cursor: initial;
     }
   }
